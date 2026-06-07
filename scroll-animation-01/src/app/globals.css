@@ -75,7 +75,7 @@ section {
 
 .dissolve-cell {
   position: absolute;
-  background: var(--dissolve-colo, #ff6426);
+  background: var(--dissolve-color, #ff6426);
   visibility: hidden;
   font-family: var(--font-dm-mono, monospace);
   font-weight: 500;
