@@ -1,0 +1,42 @@
+:root {
+  --card-1-stroke: #e67339;
+  --card-2-stroke: #a66363;
+  --card-3-stroke: #eb3828;
+  --card-4-stroke: #a6a09d;
+  --card-5-stroke: #99938a;
+  --card-6-stroke: #5f7c98;
+  --card-base-stroke: #e0e0e0;
+  --card-copy: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-google-sans, sans-serif);
+}
+
+h1 {
+  font-size: clamp(3rem, 5vw, 7rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
+}
+
+h3 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-weight: 450;
+  line-height: 1.25;
+  letter-spacing: -0.025rem;
+}
+
+
+img,
+svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
