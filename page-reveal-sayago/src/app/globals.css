@@ -1,0 +1,87 @@
+:root {
+  --overlay: #0f0f0f;
+  --background: #e4e3e4;
+  --corner: #e4e4e4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.preloader-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: var(--overlay);
+}
+
+.semicolon {
+  & .square {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--background);
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  & .corner-top-r {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--corner);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 70% 30%, 0 30%);
+    transform: translate(-50%, -50%);
+  }
+
+  & .corner-top-l {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--corner);
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 30% 30%, 30% 100%, 0 100%);
+    transform: translate(-50%, -50%);
+  }
+
+  & .corner-bottom-l {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--corner);
+    clip-path: polygon(0 0, 30% 0, 30% 70%, 100% 70%, 100% 100%, 0 100%);
+    transform: translate(-50%, -50%);
+  }
+
+  & .corner-bottom-r {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--corner);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%, 0 70%, 70% 70%);
+    transform: translate(-50%, -50%);
+  }
+
+  & .colon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 120px;
+    background-color: var(--corner);
+    clip-path: polygon(100% 0, 100% 50%, 50% 100%, 20% 90%, 50% 50%, 0 50%, 0 0);
+    transform: translate(-50%, 35%);
+  }
+}
