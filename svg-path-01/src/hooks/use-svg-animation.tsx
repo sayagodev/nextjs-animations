@@ -36,21 +36,19 @@ export function useSVGAnimation(containerRef: RefObject<HTMLDivElement | null>) 
       gsap.set(split.words, { yPercent: 100 });
 
       cardPaths.forEach((path) => {
-        const svgPath = path as SVGPathElement;
-        const length = svgPath.getTotalLength();
-        svgPath.style.strokeDasharray = String(length);
-        svgPath.style.strokeDashoffset = String(length);
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
       });
 
-      let tl: gsap.core.Timeline | null = null;
+      let tl;
 
       cardContainer.addEventListener("mouseenter", () => {
         if (tl) tl.kill();
-        const tween = gsap.timeline();
-        tl = tween;
+        tl = gsap.timeline();
 
         cardPaths.forEach((path) => {
-          tween.to(
+          tl.to(
             path,
             {
               strokeDashoffset: 0,
@@ -62,7 +60,7 @@ export function useSVGAnimation(containerRef: RefObject<HTMLDivElement | null>) 
           );
         });
 
-        tween.to(
+        tl.to(
           split.words,
           {
             yPercent: 0,
@@ -76,14 +74,12 @@ export function useSVGAnimation(containerRef: RefObject<HTMLDivElement | null>) 
 
       cardContainer.addEventListener("mouseleave", () => {
         if (tl) tl.kill();
-        const tween = gsap.timeline();
-        tl = tween;
+        tl = gsap.timeline();
 
         cardPaths.forEach((path) => {
-          const svgPath = path as SVGPathElement;
-          const length = svgPath.getTotalLength();
-          tween.to(
-            svgPath,
+          const length = path.getTotalLength();
+          tl.to(
+            path,
             {
               strokeDashoffset: length,
               attr: { "stroke-width": 200 },
@@ -94,7 +90,7 @@ export function useSVGAnimation(containerRef: RefObject<HTMLDivElement | null>) 
           );
         });
 
-        tween.to(
+        tl.to(
           split.words,
           {
             yPercent: 100,

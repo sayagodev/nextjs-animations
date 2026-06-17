@@ -67,12 +67,6 @@ footer {
   overflow: hidden;
 }
 
-.card-img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
 .card-container .svg-stroke {
   position: absolute;
   top: 50%;

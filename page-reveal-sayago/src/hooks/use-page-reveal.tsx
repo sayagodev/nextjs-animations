@@ -31,41 +31,46 @@ export function UsePageReveal(containerRef: RefObject<HTMLDivElement | null>) {
       duration: 0.3,
       ease: "hop"
     })
-
+    tl.to(".square", {
+      opacity: 0,
+      duration: 0,
+    }, "<0.3")
     tl.to(".corner-top-r", {
       x: vw / 2 - off,
       y: -(vh / 2) + off,
-      backgroundColor: "var(--overlay)",
       duration: 0.3,
       ease: "hop"
-    }, "<0.3")
+    }, "<")
     tl.to(".corner-top-l", {
       x: -(vw / 2) + off,
       y: -(vh / 2) + off,
-      backgroundColor: "var(--overlay)",
       duration: 0.3,
       ease: "hop"
     }, "<")
     tl.to(".corner-bottom-l", {
       x: -(vw / 2) + off,
       y: vh / 2 - off,
-      backgroundColor: "var(--overlay)",
       duration: 0.3,
       ease: "hop"
     }, "<")
     tl.to(".corner-bottom-r", {
       x: vw / 2 - off,
       y: vh / 2 - off,
-      backgroundColor: "var(--overlay)",
       duration: 0.3,
       ease: "hop"
     }, "<")
-    tl.to(".square", {
-      width: "100%",
-      height: "100%",
+    tl.to(".frame-top-r", {
+      x: vw / 2,
+      y: -(vh / 2),
       duration: 0.3,
       ease: "hop"
-    }, "<0.01")
+    }, "<")
+    tl.to(".frame-bottom-l", {
+      x: -(vw / 2),
+      y: vh / 2,
+      duration: 0.3,
+      ease: "hop"
+    }, "<")
 
     let resize: (() => void) | null = null
 

@@ -92,7 +92,7 @@ p {
 
 .hero-revealer {
   background-color: var(--base-200);
-  clip-path: polygon(49.5% 50%, 50.5% 50%, 50.5% 50%, 49.5% 50%);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 
 .hero-img {

@@ -5,9 +5,9 @@ import { LenisProvider } from "@/components/providers/lenis-provider";
 
 const googleSans = Google_Sans({
   variable: "--font-google-sans",
-  subsets: ["latin"],
   style: "italic",
-  weight: "variable"
+  subsets: ["latin"],
+  weight: "variable",
 });
 
 export const metadata: Metadata = {
@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${googleSans.variable}`}>
-      <body>
-        <LenisProvider>{children}</LenisProvider>
-      </body>
+      <LenisProvider>
+        <body>{children}</body>
+      </LenisProvider>
     </html>
   );
 }

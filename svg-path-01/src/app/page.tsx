@@ -2,7 +2,6 @@
 
 import { useSVGAnimation } from "@/hooks/use-svg-animation";
 import { useRef } from "react"
-import Image from "next/image"
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -18,7 +17,7 @@ export default function Home() {
       <div className="row">
         <div className="card-container" id="card-1">
           <div className="card-img">
-            <Image src="/img1.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img1.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
@@ -58,7 +57,7 @@ export default function Home() {
         </div>
         <div className="card-container" id="card-2">
           <div className="card-img">
-            <Image src="/img2.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img2.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
@@ -101,7 +100,7 @@ export default function Home() {
       <div className="row">
         <div className="card-container" id="card-3">
           <div className="card-img">
-            <Image src="/img3.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img3.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
@@ -141,7 +140,7 @@ export default function Home() {
         </div>
         <div className="card-container" id="card-4">
           <div className="card-img">
-            <Image src="/img4.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img4.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
@@ -184,7 +183,7 @@ export default function Home() {
       <div className="row">
         <div className="card-container" id="card-5">
           <div className="card-img">
-            <Image src="/img5.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img5.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
@@ -224,7 +223,7 @@ export default function Home() {
         </div>
         <div className="card-container" id="card-6">
           <div className="card-img">
-            <Image src="/img6.jpg" fill alt="" sizes="(max-width: 1000px) 100vw, 50vw" />
+            <img src="/img6.jpg" alt="" />
           </div>
           <div className="svg-stroke svg-stroke-1">
             <svg
